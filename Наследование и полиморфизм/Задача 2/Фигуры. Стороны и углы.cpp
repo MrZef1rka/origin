@@ -38,14 +38,22 @@ public:
 
 	};
 	
-	const int* getTriangleSides() const 
-	{ return sidesTriangle; }
-	const int* getTriangleAngles() const 
-	{ return anglesTriangle; }
-	const int* getQuadrilateralSides() const 
-	{ return sidesQuadrilateral; }
-	const int* getQuadrilateralAngles() const 
-	{ return anglesQuadrilateral; }
+	int* getTriangleSides()
+	{ 
+		return sidesTriangle; 
+	}
+	int* getTriangleAngles() 
+	{ 
+		return anglesTriangle; 
+	}
+	int* getQuadrilateralSides()
+	{ 
+		return sidesQuadrilateral; 
+	}
+	 int* getQuadrilateralAngles()
+	{ 
+		return anglesQuadrilateral; 
+	}
 
 };
 
@@ -59,7 +67,7 @@ public:
 
 		cout << "Треугольник: " << endl;
 		cout << "Стороны: " << "a = " << getTriangleSides()[0] << "\tb = " << getTriangleSides()[1] << "\tc = " << getTriangleSides()[2] << endl;
-		cout << "Углы: " << "A = " << getTriangleAngles()[0] << "\tB = " << getTriangleAngles()[1] << "\tC = " << getTriangleAngles()[2] << "\n" << endl;
+		cout << "Углы: " << "\t A = " << getTriangleAngles()[0] << "\tB = " << getTriangleAngles()[1] << "\tC = " << getTriangleAngles()[2] << "\n" << endl;
 	};
 };
 
@@ -72,7 +80,7 @@ public:
 
 		cout << "Прямоугольный треугольник: " << endl;
 		cout << "Стороны: " << "a = " << getTriangleSides()[0] << "\tb = " << getTriangleSides()[1] << "\tc = " << getTriangleSides()[2] << endl;
-		cout << "Углы: " << "A = " << getTriangleAngles()[0] << "\tB = " << getTriangleAngles()[1] << "\tC = " << getTriangleAngles()[2] << "\n" << endl;
+		cout << "Углы: " << "\t A = " << getTriangleAngles()[0] << "\tB = " << getTriangleAngles()[1] << "\tC = " << getTriangleAngles()[2] << "\n" << endl;
 	};
 };
 
@@ -85,7 +93,7 @@ public:
 
 		cout << "Равнобедренный треугольник: " << endl;
 		cout << "Стороны: " << "a = " << getTriangleSides()[0] << "\tb = " << getTriangleSides()[1] << "\tc = " << getTriangleSides()[2] << endl;
-		cout << "Углы: " << "A = " << getTriangleAngles()[0] << "\tB = " << getTriangleAngles()[1] << "\tC = " << getTriangleAngles()[2] << "\n" << endl;
+		cout << "Углы: " << "\t A = " << getTriangleAngles()[0] << "\tB = " << getTriangleAngles()[1] << "\tC = " << getTriangleAngles()[2] << "\n" << endl;
 	};
 };
 
@@ -98,7 +106,7 @@ public:
 
 		cout << "Равносторонний треугольник: " << endl;
 		cout << "Стороны: " << "a = " << getTriangleSides()[0] << "\tb = " << getTriangleSides()[1] << "\tc = " << getTriangleSides()[2] << endl;
-		cout << "Углы: " << "A = " << getTriangleAngles()[0] << "\tB = " << getTriangleAngles()[1] << "\tC = " << getTriangleAngles()[2] << "\n" << endl;
+		cout << "Углы: " << "\t A = " << getTriangleAngles()[0] << "\tB = " << getTriangleAngles()[1] << "\tC = " << getTriangleAngles()[2] << "\n" << endl;
 	};
 };
 
@@ -110,10 +118,8 @@ public:
 	void print_info(Figure* figure) override {
 
 		cout << "Четырёхугольник: " << endl;
-		cout << "Стороны: " << "a = " << getQuadrilateralSides()[0] << "\tb = " << getQuadrilateralSides()[1] 
-			<< "\tc = " << getQuadrilateralSides()[2] << "\td = " << getQuadrilateralSides()[3] << endl;
-		cout << "Углы: " << "A = " << getQuadrilateralAngles()[0] << "\tB = " << getQuadrilateralAngles()[1] 
-			<< "\tC = " << getQuadrilateralAngles()[2] << "\tD = " << getQuadrilateralAngles()[3] << "\n" << endl;
+		cout << "Стороны: " << "a = " << getQuadrilateralSides()[0] << "\tb = " << getQuadrilateralSides()[1] << "\tc = " << getQuadrilateralSides()[2] << "\td = " << getQuadrilateralSides()[3] << endl;
+		cout << "Углы: " << "\t A = " << getQuadrilateralAngles()[0] << "\tB = " << getQuadrilateralAngles()[1] << "\tC = " << getQuadrilateralAngles()[2] << "\tD = " << getQuadrilateralAngles()[3] << "\n" << endl;
 	};
 };
 
@@ -125,10 +131,8 @@ public:
 	void print_info(Figure* figure) override {
 
 		cout << "Прямоугольник: " << endl;
-		cout << "Стороны: " << "a = " << getQuadrilateralSides()[0] << "\tb = " << getQuadrilateralSides()[1]
-			<< "\tc = " << getQuadrilateralSides()[2] << "\td = " << getQuadrilateralSides()[3] << endl;
-		cout << "Углы: " << "A = " << getQuadrilateralAngles()[0] << "\tB = " << getQuadrilateralAngles()[1]
-			<< "\tC = " << getQuadrilateralAngles()[2] << "\tD = " << getQuadrilateralAngles()[3] << "\n" << endl;
+		cout << "Стороны: " << "a = " << getQuadrilateralSides()[0] << "\tb = " << getQuadrilateralSides()[1] << "\tc = " << getQuadrilateralSides()[2] << "\td = " << getQuadrilateralSides()[3] << endl;
+		cout << "Углы: " << "\t A = " << getQuadrilateralAngles()[0] << "\tB = " << getQuadrilateralAngles()[1] << "\tC = " << getQuadrilateralAngles()[2] << "\tD = " << getQuadrilateralAngles()[3] << "\n" << endl;
 	};
 };
 
@@ -139,11 +143,8 @@ public:
 	void print_info(Figure* figure) override {
 
 		cout << "Квадрат: " << endl;
-		cout << "Стороны: " << "a = " << getQuadrilateralSides()[0] << "\tb = " << getQuadrilateralSides()[1]
-			<< "\tc = " << getQuadrilateralSides()[2] << "\td = " << getQuadrilateralSides()[3] << endl;
-
-		cout << "Углы: " << "A = " << getQuadrilateralAngles()[0] << "\tB = " << getQuadrilateralAngles()[1]
-			<< "\tC = " << getQuadrilateralAngles()[2] << "\tD = " << getQuadrilateralAngles()[3] << "\n" << endl;
+		cout << "Стороны: " << "a = " << getQuadrilateralSides()[0] << "\tb = " << getQuadrilateralSides()[1] << "\tc = " << getQuadrilateralSides()[2] << "\td = " << getQuadrilateralSides()[3] << endl;
+		cout << "Углы: " << "\t A = " << getQuadrilateralAngles()[0] << "\tB = " << getQuadrilateralAngles()[1] << "\tC = " << getQuadrilateralAngles()[2] << "\tD = " << getQuadrilateralAngles()[3] << "\n" << endl;
 	};
 };
 
@@ -154,11 +155,8 @@ public:
 
 	void print_info(Figure* figure) override {
 		cout << "Параллелограмм: " << endl;
-		cout << "Стороны: " << "a = " << getQuadrilateralSides()[0] << "\tb = " << getQuadrilateralSides()[1]
-			<< "\tc = " << getQuadrilateralSides()[2] << "\td = " << getQuadrilateralSides()[3] << endl;
-
-		cout << "Углы: " << "A = " << getQuadrilateralAngles()[0] << "\tB = " << getQuadrilateralAngles()[1]
-			<< "\tC = " << getQuadrilateralAngles()[2] << "\tD = " << getQuadrilateralAngles()[3] << "\n" << endl;
+		cout << "Стороны: " << "a = " << getQuadrilateralSides()[0] << "\tb = " << getQuadrilateralSides()[1] << "\tc = " << getQuadrilateralSides()[2] << "\td = " << getQuadrilateralSides()[3] << endl;
+		cout << "Углы: " << "\t A = " << getQuadrilateralAngles()[0] << "\tB = " << getQuadrilateralAngles()[1] << "\tC = " << getQuadrilateralAngles()[2] << "\tD = " << getQuadrilateralAngles()[3] << "\n" << endl;
 	};
 };
 
@@ -169,11 +167,8 @@ public:
 
 	void print_info(Figure* figure) override {
 		cout << "Ромб: " << endl;
-		cout << "Стороны: " << "a = " << getQuadrilateralSides()[0] << "\tb = " << getQuadrilateralSides()[1]
-			<< "\tc = " << getQuadrilateralSides()[2] << "\td = " << getQuadrilateralSides()[3] << endl;
-
-		cout << "Углы: " << "A = " << getQuadrilateralAngles()[0] << "\tB = " << getQuadrilateralAngles()[1]
-			<< "\tC = " << getQuadrilateralAngles()[2] << "\tD = " << getQuadrilateralAngles()[3] << endl;
+		cout << "Стороны: " << "a = " << getQuadrilateralSides()[0] << "\tb = " << getQuadrilateralSides()[1] << "\tc = " << getQuadrilateralSides()[2] << "\td = " << getQuadrilateralSides()[3] << endl;
+		cout << "Углы: " << "\t A = " << getQuadrilateralAngles()[0] << "\tB = " << getQuadrilateralAngles()[1] << "\tC = " << getQuadrilateralAngles()[2] << "\tD = " << getQuadrilateralAngles()[3] << endl;
 	};
 };
 
@@ -193,6 +188,9 @@ int main()
 
 	EquilateralTriangle equilateralTriangle(20);
 	equilateralTriangle.print_info(&equilateralTriangle);
+
+	Quadrilateral quadrilateral(10, 20, 30, 40);
+	quadrilateral.print_info(&quadrilateral);
 
 	Rectangle rectangle(10, 20);
 	rectangle.print_info(&rectangle);
