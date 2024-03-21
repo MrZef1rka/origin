@@ -1,0 +1,15 @@
+# ninja log v5
+1	268	7327381448750707	CMakeFiles/Class_Hierarchy.dir/Class_Hierarchy.cpp.obj	e94f1efa23529ad
+7	592	7327387529966725	CMakeFiles/Class_Hierarchy.dir/RightTriangle.cpp.obj	4c3d95fb90ed21b3
+11	623	7327387530276790	CMakeFiles/Class_Hierarchy.dir/IsoscelesTriangle.cpp.obj	9a1fcbba22da3d47
+9	627	7327387530306797	CMakeFiles/Class_Hierarchy.dir/EquilateralTriangle.cpp.obj	b334794c7eaf36ac
+19	579	7327387529836690	CMakeFiles/Class_Hierarchy.dir/Rhombus.cpp.obj	1c5e6e4b95aae50f
+640	940	7327387533187440	Class_Hierarchy.exe	18ba0e2fd3913eff
+13	598	7327387530016734	CMakeFiles/Class_Hierarchy.dir/Rectangle.cpp.obj	76df182ca68760c4
+21	626	7327387530316798	CMakeFiles/Class_Hierarchy.dir/Square.cpp.obj	dfb590ab7d48da5
+5	615	7327387530186770	CMakeFiles/Class_Hierarchy.dir/Triangle.cpp.obj	2a100eb0ab4ee5b6
+3	616	7327387530206774	CMakeFiles/Class_Hierarchy.dir/Figure.cpp.obj	1ee0a1fb37b24653
+15	635	7327387530406822	CMakeFiles/Class_Hierarchy.dir/Quadrilateral.cpp.obj	c68f397ae4eac51e
+17	640	7327387530456833	CMakeFiles/Class_Hierarchy.dir/Parallelogram.cpp.obj	c4c82ca7c94a4eb8
+9	272	7327388021589521	CMakeFiles/Class_Hierarchy.dir/Class_Hierarchy.cpp.obj	e94f1efa23529ad
+272	397	7327388022463820	Class_Hierarchy.exe	18ba0e2fd3913eff

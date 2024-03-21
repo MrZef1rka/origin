@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "complex_project",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Class_Hierarchy::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Class_Hierarchy-Debug-2af686a4554acb1fb585.json",
+					"name" : "Class_Hierarchy",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/MrZefirka/source/repos/\u0418\u0435\u0440\u0430\u0440\u0445\u0438\u044f \u043a\u043b\u0430\u0441\u0441\u043e\u0432/out/build/x64-Debug",
+		"source" : "C:/Users/MrZefirka/source/repos/\u0418\u0435\u0440\u0430\u0440\u0445\u0438\u044f \u043a\u043b\u0430\u0441\u0441\u043e\u0432"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
