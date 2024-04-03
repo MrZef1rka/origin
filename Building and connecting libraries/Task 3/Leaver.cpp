@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <string>
 #include <windows.h>
-#include "../DynamicLibrary/DynamicLibrary.h"
+#include "DynamicLibrary.h"
 
 
 int main()
