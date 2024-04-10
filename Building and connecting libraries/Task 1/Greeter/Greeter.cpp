@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <string>
 #include <windows.h>
-#include "StaticLibrary.h"
+#include "../StaticLibrary/StaticLibrary.h"
 
 
 int main()
