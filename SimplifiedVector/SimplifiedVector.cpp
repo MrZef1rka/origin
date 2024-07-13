@@ -59,6 +59,10 @@ public:
 			size_t newCapacity = cap == 0 ? 1 : cap * 2;
 			T* newArray = new T[newCapacity];
 
+			if (newArray == nullptr) {
+				throw std::bad_alloc();
+			}
+
 			for (size_t i = 0; i < sz; i++)
 				{
 					newArray[i] = arr[i];

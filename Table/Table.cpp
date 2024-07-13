@@ -10,6 +10,8 @@ private:
     int rows;
     int cols;
 public:
+    Array() : array(nullptr), rows(0), cols(0) {}
+
     Array(int a, int b) : rows(a), cols(b) {
     
         array = new T*[rows];
@@ -21,6 +23,8 @@ public:
     
     };
 
+    Array(const Array& other) = delete;
+
     ~Array() {
 
         for (int i = 0; i < rows; i++) {
@@ -31,6 +35,14 @@ public:
         delete[] array;
         
     };
+
+
+    Array& operator=(const Array& other) = delete;
+
+    const T* operator =() const {
+    
+    
+    }
 
     const T* operator[](int index) const {
     

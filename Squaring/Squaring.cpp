@@ -10,31 +10,33 @@ T Squaring(T a) {
 };
 
 template<typename T>
-void Squaring(vector<T>& vec) {
+vector<T> Squaring(const vector<T>& vec) {
 
-    for (auto& elem : vec)
+    vector<T> res = vec;
+    for (auto& elem : res)
     {
         elem = Squaring(elem);
     };
+    return res;
 };
 
 int main()
 {
-    std::cout << Squaring(10) << endl;
-    std::cout << Squaring(5) << endl;
-    std::cout << Squaring(8) << endl;
-    std::cout << Squaring(15) << endl;
-
+    int a = 5; int x = Squaring(a); //Переменная a по прежнему равна 5  
+    std::vector<int> b = { -1,4,8 };
+    std::vector<int> y = Squaring(b);
+    
+    for (const auto& elem : y) 
+    {
+        cout << elem << endl;
+    };
 
     cout << "-----------" << endl;
-    
-    vector<int> vec = { 10, 5, 8, 15 };
-    Squaring(vec);
 
-    for (const auto& elem : vec) 
+    for (const auto& elem : b)
     {
         cout << elem << endl;
     };
 
     return 0;
-}
+};
