@@ -19,10 +19,7 @@ public:
     ~MainWindow();
 
 private slots:
-    void show_reference();
-
-private slots:
-    void port_cancel();
+    void on_pb_open_clicked();
 
 private:
     Ui::MainWindow *ui;

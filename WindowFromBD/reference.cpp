@@ -12,3 +12,4 @@ Reference::~Reference()
 {
     delete ui;
 }
+
