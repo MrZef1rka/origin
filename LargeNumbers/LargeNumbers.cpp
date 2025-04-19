@@ -127,7 +127,7 @@ public:
         result.trimZeros();
         return result;
     }
-
+    
     // Печать числа
     void print() const {
         for (auto it = digits.rbegin(); it != digits.rend(); ++it) {
@@ -143,11 +143,7 @@ int main() {
     cout << "999 + 1 = ";
     (num1 + num2).print(); // 1000
     cout << endl;
-
-    cout << "999 * 1 = ";
-    (num1 * 1).print(); // 999
-    cout << endl;
-
+    
     cout << "123 * 45 = ";
     (LargeNumber("123") * 45).print(); // 5535
     cout << endl;
