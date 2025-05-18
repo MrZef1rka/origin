@@ -1,13 +1,14 @@
-cmake_minimum_required (VERSION 3.20)
+cmake_minimum_required(VERSION 3.20)
 
-set(PostgreSQL_ADDITIONAL_VERSIONS "16")
+set(PostgreSQL_ADDITIONAL_VERSIONS "17")
 
-project (PostgreSQLAndC++)
+project(PostgreSQLAndC++)
 
-add_subdirectory("C:\\Users\\MrZefirka\\Desktop\\libpqxx-7.9.2" libpqxx-build)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable (PostgreSQLAndC++ main.cpp)
+find_package(libpqxx REQUIRED)
 
-target_compile_features(PostgreSQLAndC++ PRIVATE cxx_std_17)
+add_executable(PostgreSQLAndC++ main.cpp)
 
-target_link_libraries(PostgreSQLAndC++ PRIVATE pqxx)
+target_link_libraries(PostgreSQLAndC++ pqxx)
