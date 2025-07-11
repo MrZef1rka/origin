@@ -52,7 +52,7 @@ int main()
 	for_each(in.begin(), in.end(), ref(fun));
 
 	cout << "[OUT]: get_sum() = " << fun.get_sum() << endl;
-	cout << "[OUT]: get_count() = " << fun.get_count();
+	cout << "[OUT]: get_count() = " << fun.get_count() << endl;
 
 	return 0;
 }
