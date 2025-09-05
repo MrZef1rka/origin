@@ -76,21 +76,21 @@ int main() {
  
         // Основной цикл с проверкой shutdown
         std::string command;
-        std::cout << "Введите 'get' для открытия поисковика или 'exit'(Ctrl+C) для выхода: " << std::endl;
+        std::cout << "Введите 'start' для открытия поисковика или 'exit'(Ctrl+C) для выхода: " << std::endl;
         while (!shutdownRequested) {
 
             if (!std::getline(std::cin, command)) {
                 break;
             }
 
-            if (command == "get" || command == "Get") {
+            if (command == "start" || command == "Start") {
                 openBrowser(config.getSearchEnginePort());
             }
             else if (command == "exit" || command == "Exit") {
                 break;
             }
             else if (!command.empty()) {
-                std::cout << "Неизвестная команда. Введите 'get' или 'exit'(Ctrl+C)!" << std::endl;
+                std::cout << "Неизвестная команда. Введите 'start' или 'exit'(Ctrl+C)!" << std::endl;
             }
         }
         searchEngine.stop();;
