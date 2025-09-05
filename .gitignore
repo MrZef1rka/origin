@@ -1,0 +1,7 @@
+﻿################################################################################
+# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
+################################################################################
+
+/SearchEngine/.vs/SearchEngine
+/SearchEngine/SearchEngine/x64/Debug
+/SearchEngine/x64/Debug
