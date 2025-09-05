@@ -83,14 +83,14 @@ int main() {
                 break;
             }
 
-            if (command == "get" || command == "Get") {
+            if (command == "start" || command == "Start") {
                 openBrowser(config.getSearchEnginePort());
             }
             else if (command == "exit" || command == "Exit") {
                 break;
             }
             else if (!command.empty()) {
-                std::cout << "Неизвестная команда. Введите 'get' или 'exit'(Ctrl+C)!" << std::endl;
+                std::cout << "Неизвестная команда. Введите 'start' или 'exit'(Ctrl+C)!" << std::endl;
             }
         }
         searchEngine.stop();;
