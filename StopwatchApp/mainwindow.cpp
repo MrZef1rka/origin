@@ -8,6 +8,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    ui->lapBrowser->setAlignment(Qt::AlignCenter);
+
     // Подключение сигналов и слотов
     connect(m_stopwatch, &Stopwatch::timeUpdated, this, &MainWindow::updateTimeDisplay);
     connect(m_stopwatch, &Stopwatch::lapUpdated, this, &MainWindow::updateLapDisplay);
@@ -44,6 +46,8 @@ void MainWindow::clearStopwatch()
     m_stopwatch->clear();
     ui->timeLabel->setText("0:00");      // Сбрасываем текст лейбла времени
     ui->lapBrowser->clear();             // Очищаем текстовый браузер
+
+    ui->lapBrowser->setAlignment(Qt::AlignCenter);
 }
 
 void MainWindow::updateTimeDisplay(int time)
