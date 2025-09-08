@@ -22,7 +22,7 @@ private slots:
     void toggleStartStop();
     void clearStopwatch();
     void updateTimeDisplay(int time);
-    void updateLapDisplay(int lap, int lapTime);
+    void handleLap();
 
 private:
     Ui::MainWindow *ui;

@@ -10,7 +10,7 @@ Stopwatch::Stopwatch(QObject *parent)
 void Stopwatch::start()
 {
     if (!m_isRunning) {
-        m_timer->start(100);  // Интервал обновления 0.1 сек
+        m_timer->start(10);  // Интервал обновления 0.1 сек
         m_isRunning = true;
     }
 }
@@ -25,8 +25,6 @@ void Stopwatch::stop()
 
 void Stopwatch::clear()
 {
-    //m_timer->stop();
-    //m_isRunning = false;
     m_time = 0;
     m_lastLapTime = 0;
     m_lap = 0;
@@ -39,8 +37,15 @@ void Stopwatch::lap()
         int lapTime = m_time - m_lastLapTime; // Время с предыдущего круга
         m_lastLapTime = m_time;               // Обновляем время последнего круга
         m_lap++;
-        emit lapUpdated(m_lap, lapTime);      // Отправляем сигнал для интерфейса
+
+        m_lastLap.number = m_lap;
+        m_lastLap.time = lapTime;
     }
+}
+
+LapInfo Stopwatch::getLastLap() const
+{
+    return m_lastLap;
 }
 
 bool Stopwatch::isRunning() const
@@ -50,6 +55,6 @@ bool Stopwatch::isRunning() const
 
 void Stopwatch::updateTimer()
 {
-    m_time += 100; // Увеличиваем время на 0.1 сек
+    m_time += 10; // Увеличиваем время на 0.1 сек
     emit timeUpdated(m_time);
 }

@@ -12,11 +12,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // Подключение сигналов и слотов
     connect(m_stopwatch, &Stopwatch::timeUpdated, this, &MainWindow::updateTimeDisplay);
-    connect(m_stopwatch, &Stopwatch::lapUpdated, this, &MainWindow::updateLapDisplay);
 
     // Инициализация кнопок
     connect(ui->startStopButton, &QPushButton::clicked, this, &MainWindow::toggleStartStop);
-    connect(ui->lapButton, &QPushButton::clicked, m_stopwatch, &Stopwatch::lap);
+    connect(ui->lapButton, &QPushButton::clicked, this, &MainWindow::handleLap);
     connect(ui->clearButton, &QPushButton::clicked, this, &MainWindow::clearStopwatch);
 
     // Кнопка «Круг» неактивна при запуске
@@ -44,25 +43,29 @@ void MainWindow::toggleStartStop()
 void MainWindow::clearStopwatch()
 {
     m_stopwatch->clear();
-    ui->timeLabel->setText("0:00");      // Сбрасываем текст лейбла времени
+    ui->timeLabel->setText("0:00:00");      // Сбрасываем текст лейбла времени
     ui->lapBrowser->clear();             // Очищаем текстовый браузер
-
     ui->lapBrowser->setAlignment(Qt::AlignCenter);
+
+}
+
+void MainWindow::handleLap()
+{
+    m_stopwatch->lap();
+    LapInfo lapInfo = m_stopwatch->getLastLap();
+    ui->lapBrowser->append(lapInfo.toString());
 }
 
 void MainWindow::updateTimeDisplay(int time)
 {
-    int seconds = (time / 1000) % 60;
-    int minutes = (time / 1000) / 60;
-    ui->timeLabel->setText(QString("%1:%2").arg(minutes).arg(seconds, 2, 10, QChar('0')));
+    int totalSeconds = time / 1000;
+    int seconds = totalSeconds % 60;
+    int minutes = totalSeconds / 60;
+    int hundredths = (time % 1000) / 10; // Десятые доли секунды
+
+    ui->timeLabel->setText(QString("%1:%2:%3")
+                               .arg(minutes, 2, 10, QChar('0'))
+                               .arg(seconds, 2, 10, QChar('0'))
+                               .arg(hundredths, 2, 10, QChar('0')));
 }
 
-void MainWindow::updateLapDisplay(int lap, int lapTime)
-{
-    int seconds = (lapTime / 1000) % 60;
-    int minutes = (lapTime / 1000) / 60;
-    ui->lapBrowser->append(QString("Круг %1, время: %2:%3")
-                               .arg(lap)
-                               .arg(minutes)
-                               .arg(seconds, 2, 10, QChar('0')));
-}
